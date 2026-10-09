@@ -1,15 +1,13 @@
-name: CI
-on: [push]
-jobs:
-  check:
-    name: Foundry project
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-      - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
-      - name: Run Forge tests
-        run: forge test -vvv
-        id: test
+# CryptoBank - Foundry
+A simple and secure bank smart contract built with Foundry. Users can deposit, withdraw and check balances.
+
+## Features
+- Deposit ETH
+- Withdraw ETH with safety checks
+- View balance per user
+
+## Contracts
+- src/CryptoBank.sol - Main bank logic
+
+## How to test
+forge test -vv
